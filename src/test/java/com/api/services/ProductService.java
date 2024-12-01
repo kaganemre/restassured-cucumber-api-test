@@ -22,7 +22,7 @@ public class ProductService extends Base {
                 .contentType(ContentType.JSON)
                 .body(body).log().all()
                 .when()
-                .post("/api/users/login");
+                .post("/users/login");
     }
 
     public static void validateToken(){
@@ -51,7 +51,7 @@ public class ProductService extends Base {
                     .and()
                     .body(body)
                     .when().log().all()
-                    .post("/api/products");
+                    .post("/products");
 
         assertEquals(201, response.statusCode());
         productId = response.path("id");
@@ -83,7 +83,7 @@ public class ProductService extends Base {
                     .and()
                     .body(body)
                     .when().log().all()
-                    .put("/api/products");
+                    .put("/products");
 
         assertEquals(200, response.statusCode());
 
@@ -100,7 +100,7 @@ public class ProductService extends Base {
                     .contentType(ContentType.JSON)
                     .header("Authorization", "Bearer " + token)
                     .when()
-                    .delete("/api/products/" + productId);
+                    .delete("/products/" + productId);
 
         assertEquals(204, response.statusCode());
     }

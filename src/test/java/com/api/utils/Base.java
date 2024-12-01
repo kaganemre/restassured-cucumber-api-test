@@ -16,7 +16,7 @@ public class Base {
     public static int productId;
 
     public static RequestSpecification spec = new RequestSpecBuilder()
-                                                    .setBaseUri("http://localhost:5191")
+                                                    .setBaseUri("http://localhost:5191/api")
                                                     .addFilters(Arrays.asList(new RequestLoggingFilter(), new ResponseLoggingFilter(), new ErrorLoggingFilter()))
                                                     .build();
 
