@@ -1,0 +1,16 @@
+-------------------------------------------------------------------------------
+Test set: com.api.runners.TestRunner
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.407 s <<< FAILURE! -- in com.api.runners.TestRunner
+Product Flow.The user performs product adding, updating and deleting operations -- Time elapsed: 0.281 s <<< ERROR!
+io.cucumber.junit.UndefinedStepException: 
+The step 'User submits login information' is undefined.
+You can implement this step using the snippet(s) below:
+
+@When("User submits login information")
+public void user_submits_login_information() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+
